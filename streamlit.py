@@ -71,8 +71,8 @@ def main():
         
         " Anxiety ": [
             "47. Have you experienced excessive worry or restlessness that is difficult to control?",
-            "48. Have you experienced three or more of the following symptoms associated with your anxiety: fatigue, difficulty concentrating, irritability, muscle tension, or sleep disturbances?",
-            "49. Have you had persistent anxiety or worry about various aspects of your life that has lasted for over six months?",
+            "48. Have you experienced three or more of the following symptoms: fatigue, difficulty concentrating, irritability, muscle tension, or sleep disturbances?",
+            "49. Have you had persistent worry or fear about various aspects of your life that has lasted for over six months?",
             "50. Have you found it difficult to control your worry or stop yourself from worrying?",
             "51. Has your anxiety caused significant distress or impairment in your social, occupational, or other important areas of functioning?",
             "52. Have your symptoms occurred without being caused by the effects of substances or medical conditions?",
