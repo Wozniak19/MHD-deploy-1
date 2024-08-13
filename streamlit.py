@@ -77,7 +77,7 @@ def main():
             "51. Has your nervousness caused significant distress or impairment in your social, occupational, or other important areas of functioning?",
             "52. Have your symptoms occurred without being caused by the effects of substances or medical conditions?",
             "53. Do your symptoms occur most of the day and are not limited to specific situations or objects?",
-            "54. Have you experienced recurrent panic attacks involving abrupt, intense fear, with symptoms like palpitations, sweating, trembling, shortness of breath, chest pain, dizziness, chills, hot flushes, or fear of imminent death, with four or more symptoms present?",
+            "54. Have you experienced recurrent panic attacks involving abrupt, intense fear, with symptoms like palpitations, sweating, trembling, shortness of breath, chest pain, dizziness, chills,nausea,paresthesias,derealization,fear of losing control,hot flushes, or fear of imminent death, with four or more symptoms present?",
             "55. Have you experienced discrete episodes of intense fear or apprehension lasting between 5 to 30 minutes?",
             "56. Are your panic attacks not caused by the effects of substances or medical conditions like hyperthyroidism?",
             "57. Do you worry or have fears about further episodes of panic attacks occurring?",
