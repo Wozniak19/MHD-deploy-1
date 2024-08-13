@@ -69,7 +69,7 @@ def main():
             "46. Have you experienced a depressive episode, including symptoms like a depressed mood, loss of pleasure, significant weight changes, sleep disturbances, psychomotor agitation, fatigue, feelings of worthlessness, difficulty concentrating, or recurrent thoughts of death?",
         ],
         
-        "Generalized Anxiety Disorder(GAD)": [
+        " Anxiety ": [
             "47. Have you experienced excessive worry or restlessness that is difficult to control?",
             "48. Have you experienced three or more of the following symptoms associated with your anxiety: fatigue, difficulty concentrating, irritability, muscle tension, or sleep disturbances?",
             "49. Have you had persistent anxiety or worry about various aspects of your life that has lasted for over six months?",
@@ -77,14 +77,10 @@ def main():
             "51. Has your anxiety caused significant distress or impairment in your social, occupational, or other important areas of functioning?",
             "52. Have your symptoms occurred without being caused by the effects of substances or medical conditions?",
             "53. Do your symptoms of anxiety occur most of the day and are not limited to specific situations or objects?",
-            ],
-        "Panic Disorder": [
             "54. Have you experienced recurrent panic attacks involving abrupt, intense fear, with symptoms like palpitations, sweating, trembling, shortness of breath, chest pain, dizziness, chills, hot flushes, or fear of imminent death, with four or more symptoms present?",
             "55. Have you experienced discrete episodes of intense fear or apprehension lasting between 5 to 30 minutes?",
             "56. Are your panic attacks not caused by the effects of substances or medical conditions like hyperthyroidism?",
             "57. Do you worry or have fears about further episodes of panic attacks occurring?",
-            ],
-        "Specific Phobia": [
             "58. Do you experience marked and excessive fear triggered by specific objects or situations, such as the sight of blood, heights, or closed spaces?",
             "59. Does the sight or thought of the specific object or situation almost always cause immediate fear?",
             "60. Do you actively avoid the phobic object or situation, or endure it with intense fear or anxiety?",
@@ -92,8 +88,6 @@ def main():
             "62. Does your fear, anxiety, or avoidance cause significant distress or impairment in your social, work, or other important areas of functioning?",
             "63. Is your fear out of proportion to the actual danger posed by the object or situation?",
             "64. Do you experience avoidance or intense anxiety when faced with the object or situation?",
-        ],
-        "Social Anxiety": [
             "65. Do you find yourself markedly avoiding social situations or objects that trigger fear or anxiety?",
             "66. Is your fear or anxiety in social situations out of proportion to the actual threat or situation?",
             "67. Does your fear or anxiety cause significant impairment in your social, occupational, or other important areas of functioning?",
@@ -105,7 +99,8 @@ def main():
             "73. Do your symptoms or the avoidance of social situations cause significant emotional distress?",
             "74. Do you recognize that your symptoms or the avoidance of social situations are excessive or unreasonable?",
             "75. Do your symptoms predominate in social situations or when thinking about them, such as blushing, fear of vomiting, or urgency/fear of micturition or defecation?",
-        ],
+            ],
+        
         "OCD": [
             "76. Do your obsessions or compulsions consume a significant amount of time each day?",
             "77. Are your obsessions or compulsions not influenced by drugs or medical conditions?",
@@ -166,34 +161,34 @@ def main():
         # Convert responses to numpy array for prediction
         responses = np.array(responses).reshape(1, -1)
         prediction = model.predict(responses)
+        st.write(len(prediction[0]))
         probabilities = model.predict_proba(responses)
 
        
         st.write("Prediction:")
         output = prediction[0]
-        diagnosis_labels = defaultdict(str)
-        i = 0
-        for labels in query:
-            diagnosis_labels[labels] = "Present" if output[i] else "Not Present" 
-            i+=1
+        # diagnosis_labels = defaultdict(str)
+        # i = 0
+        # for labels in query:
+        #     diagnosis_labels[labels] = "Present" if output[i] else "Not Present" 
+        #     i+=1
 
-        # diagnosis_labels = {
-        #     "Depression": output[0],
-        #     "Schizophrenia": output[1],
-        #     "Acute_and_transient_psychotic_disorder": output[2],
-        #     "Delusional_Disorder": output[3],
-        #     "BiPolar1": output[4],
-        #     "BiPolar2": output[5],
-        #     "Anxiety": output[6],
-        #     "Generalized_Anxiety": output[7],
-        #     "Panic_Disorder": output[8],
-        #     "Specific_Phobia": output[9],
-        #     "Social_Anxiety": output[10],
-        #     "OCD": output[11],
-        #     "PTSD": output[12],
-        #     "Gambling": output[13],
-        #     "substance_abuse": output[14]
-        # }
+        diagnosis_labels = {
+            "Depression": "Present" if output[0] else "Not Present",
+            "Schizophrenia": "Present" if output[1] else "Not Present",
+            "Acute_and_transient_psychotic_disorder": "Present" if output[2] else "Not Present",
+            "Delusional_Disorder": "Present" if output[3] else "Not Present",
+            "BiPolar1": "Present" if output[4] else "Not Present",
+            "BiPolar2": "Present" if output[5] else "Not Present",
+            "Generalized_Anxiety": "Present" if output[6] else "Not Present",
+            "Panic_Disorder": "Present" if output[7] else "Not Present",
+            "Specific_Phobia": "Present" if output[8] else "Not Present",
+            "Social_Anxiety": "Present" if output[9] else "Not Present",
+            "OCD": "Present" if output[10] else "Not Present",
+            "PTSD": "Present" if output[11] else "Not Present",
+            "Gambling": "Present" if output[12] else "Not Present",
+            "substance_abuse": "Present" if output[13] else "Not Present",
+        }
         decimals = probabilities
         
         labels = []
