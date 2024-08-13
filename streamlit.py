@@ -47,7 +47,7 @@ def main():
             "28. Have your symptoms been manageable without the need for hospitalization?",
         ],
         "Delusional Disorder ": [
-            "29. Have you experienced delusions that have lasted for at least three months?",
+            "29. Have you experienced delusions that have lasted for three months?",
             "30. Apart from delusions, have you not experienced other symptoms commonly associated with schizophrenia, such as hallucinations or disorganized speech?",
             "31. Have you not experienced significant mood episodes like depression or mania?",
             "32. Do your delusions persist over time without significant change?",
