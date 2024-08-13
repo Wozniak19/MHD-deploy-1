@@ -68,7 +68,7 @@ def main():
             "45. Have others noticed a disturbance in your mood and a change in your functioning?",
             "46. Have you experienced a depressive episode, including symptoms like a depressed mood, loss of pleasure, significant weight changes, sleep disturbances, psychomotor agitation, fatigue, feelings of worthlessness, difficulty concentrating, or recurrent thoughts of death?",
         ],
-        "":[],
+        
         "Generalized Anxiety Disorder(GAD)": [
             "47. Have you experienced excessive worry or restlessness that is difficult to control?",
             "48. Have you experienced three or more of the following symptoms associated with your anxiety: fatigue, difficulty concentrating, irritability, muscle tension, or sleep disturbances?",
